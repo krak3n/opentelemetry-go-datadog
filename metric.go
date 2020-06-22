@@ -24,7 +24,7 @@ func InstallNewPipeline() (*push.Controller, error) {
 }
 
 func NewExportPipeline() (*push.Controller, error) {
-	exp, err := NewMeterExpoter()
+	exp, err := NewMeterExporter()
 	if err != nil {
 		return nil, err
 	}
@@ -43,8 +43,8 @@ func NewExportPipeline() (*push.Controller, error) {
 type MeterExporter struct {
 }
 
-// NewMeterExpoter constructs a NewMeterExpoter
-func NewMeterExpoter() (*MeterExporter, error) {
+// NewMeterExporter constructs a NewMeterExporter
+func NewMeterExporter() (*MeterExporter, error) {
 	return &MeterExporter{}, nil
 }
 
